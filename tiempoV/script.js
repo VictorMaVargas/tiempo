@@ -12,6 +12,7 @@ function getWeather() {
         .then(data=>{
             console.log(data)
             console.log(data.main)
+            console.log(data.main.temp);
             temperatura = data.main.temp
             sensTermica = data.main.feels_like
             tempMinima = data.main.temp_min
@@ -23,7 +24,7 @@ function getWeather() {
 getWeather()
 
 function graficaTemperaturas(){
-    const labels = ["Temperatura","Sesación térmica","Temperatura mínima","Temperatura máxima"];
+    const labels = ["Temperatura","Sensación térmica","Temperatura mínima","Temperatura máxima"];
     const data = {
       labels: labels,
       datasets: [{
